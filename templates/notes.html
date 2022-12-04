@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<form id="contact" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row-config">
+      <div class="col-lg-6 offset-lg-0">
+        <div class="section-heading">
+          <h6>Anotações:</h6>
+          <!--<h2>Fill Out The Form Below To <span>Get</span> In <em>Touch</em> With Us</h2>-->
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg">
+            <fieldset>
+                {{ form.content }}
+            </fieldset>
+          </div>
+          <button id="" type="submit" class="btn">Salvar</button>
+          <table class="table" id="table_count">
+            <tbody>
+              {% for note in notes %}
+              <tr>
+                <td>{{ note.content }}</td>
+                <td>{{ note.date|date:"j/n/Y" }}</td>
+                <td>
+                  <div class="col-div-config-notes">
+                    <a type="button" class="btn-print-config" style="background-color: #d60f0f;" href="{% url 'delete_note' pk=note.id %}">Deletar</a>
+                  </div>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endblock content %}

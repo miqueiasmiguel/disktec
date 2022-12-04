@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="content">
+    <h2 style="margin: 0">Disk Tec</h2>
+    <h3 style="margin: 0">Conserto de Máquina de Lavar Roupas</h3>
+
+    <p>A SEGURADORA <b>DISK TEC</b> Conserto de Máquina de Lavar Roupas <b>CNPJ</b> 20.348.152.000.97, TEL. (83)
+      98727-7649,
+      localizada na
+      Rua Doutor Vital Brasil <b>N°</b> 59 <b>Valentina</b> , através deste <b>Seguro de Garantia</b>, garante ao</p>
+
+    <p><b>SEGURADO (a):</b> {{ client.name }}</p>
+    <p><b>CPF:</b> {{ client.cpf }} <b>RG:</b> {{ client.rg }} <b>TEL.:</b> {{ client.phone }}</p>
+    <p><b>BAIRRO:</b> {{ client.district }} <b>CIDADE:</b> {{ client.city }}</p>
+    <p><b>ENDEREÇO:</b> {{ client.address }} <b>Nº</b> {{ client.house_number }} </p>
+    <p><b>DATA: </b> {{ client.date }} </p>
+    <p><b>MÁQUINA: </b> {{ client.machine }} </p>
+    <p><b>VALOR TOTAL:</b> R${{ client.total }} <b>PARCELAS:</b> {{ client.installments_value }} </p>
+    <p><b>VALOR DE INDENIZAÇÃO:</b> R${{ client.indemnity }}</p>
+
+    <h3>SEGURO DE GARANTIA</h3>
+
+    <p><b><u>1.Objeto:</u></b></p>
+
+    <p>1.1. Este contrato de seguro garante o fiel cumprimento das obrigações assumidas pela <b>SEGURADORA</b> perante o
+      <b>SEGURADO</b>,
+      conforme o valor de Garantia fixado nesta.
+    </p>
+    <p>1.2 A <b>Manutenção da máquina</b>, inclusive a <b>troca de peças oriundas do desgaste natural</b> de sua
+      utilização
+      objeto do <b>SEGURO</b>,
+      é de total responsabilidade da <b>SEGURADORA</b>.</p>
+    <p>1.3 Caso seja Necessário a Remoção da Máquina para Manutenção <b>O SEGURADO</b> terá a opção de solicita a
+      <b>SEGURADORA</b> uma
+      <b>MÁQUINA RESERVA</b>;
+    </p>
+    <p>1.4 <b>O SEGURADO</b> deve manter a <b>MÁQUINA SEGURA</b>, pois <b>A SEGURADORA</b> não terá nenhuma
+      responsabilidade
+      no que se refere a
+      <b>DANOS</b>, <b>ROUBO</b>, ou perda da <b>MÁQUINA</b>.
+    </p>
+
+    <p><b><u>2. Definições:</u></b></p>
+
+    <p>Aplicam-se a este seguro, as seguintes definições:</p>
+    <p>2.1 A Seguradora <b>DISK TEC</b> informa através deste <b>DOCUMENTO</b> que <b>MODIFICAÇÕES</b> no <b>VALOR do
+        SEGURO</b> podem ser feitas
+      <b>ANUALMENTE</b> ou na <b>VIGÊNCIA</b> do Contrato.
+    </p>
+    <p>2.2 Limite Máximo de Garantia: valor máximo que a <b>SEGURADORA</b> se responsabilizará perante o <b>SEGURADO</b>
+      em
+      função do pagamento de indenização que será o <b>VALOR</b> avaliado de sua máquina no dia da visita para
+      o fechamento do contrato .</p>
+    <p>2.3 O <b>NÃO PAGAMENTO</b> acarretará o <b>CANCELAMENTO DO SEGURO</b> após 30 dias de atraso .</p>
+    <p>2.4 Caso não exista <b>PEÇA REFERENTE AO MODELO DA MÁQUINA SEGURADA</b> a <b>SEGURADORA</b> ficará <b>ISENTA</b>
+      de
+      <b>INDENIZAÇÃO</b>.
+    </p>
+    <p>2.5 Caracterizado <b>PERDA TOTAL</b> a <b>SEGURADORA</b> cumprirá a obrigação descrita no contrato, até o limite
+      máximo de garantia da
+      mesma, conforme for acordado entre as partes.</p>
+    <p>2.6 <b>O pagamento da indenização</b> do objeto do contrato deverá ocorrer dentro do prazo máximo de <b>30
+        (trinta)
+        dias</b>.</p>
+    <p>2.7 Deixo claro que : ______________________________________________________________________________</p>
+
+    <p><b><u>2. Definições:</u></b></p>
+
+    <p>O <b>SEGURADO</b> perderá o direito à <b>indenização</b> na ocorrência de uma ou mais das seguintes hipóteses:
+    </p>
+
+    <p>3.1 Casos fortuitos ou de força maior, nos termos do Código Civil Brasileiro;</p>
+    <p>3.2 Descumprimento das obrigações decorrente de atos ou fatos de responsabilidade do <b>SEGURADO</b>;</p>
+    <p>3.3 Atos ilícitos <b>DOLOSOS</b> ou por <b>CULPA GRAVE</b> equiparável ao dolo praticados pelo <b>SEGURADO</b>,
+      pelo
+      <b>BENEFICIÁRIO</b> ou pelo
+      representante, de um ou de outro;
+    </p>
+    <p>3.4 O <b>SEGURADO</b> não cumprir integralmente quaisquer obrigações previstas no contrato de seguro;</p>
+    <p>3.5 Se o <b>SEGURADO</b> ou seu representante legal fizer declarações inexatas ou omitir de <b>MÁ FÉ</b>
+      circunstâncias de seu
+      conhecimento que configurem o <b>DANO CAUSADO</b>;</p>
+    <p>3.6 Se o <b>SEGURADO</b> agravar intencionalmente o risco.</p>
+    <p>3.7 É <b>INEFICAZ</b> qualquer ato do <b>SEGURADO</b> que diminua ou extinga, em prejuízo da <b>SEGURADORA</b>,
+      os
+      direitos a que se refere
+      este item.</p>
+
+    <p><b><u>4. Rescisão Contratual:</u></b></p>
+
+    <p>4.1 Após a <b>CONTRATAÇÃO DO SEGURO</b> o <b>SEGURADO</b> terá o <b>PRAZO</b> de até <b>7 DIAS</b> para informar
+      a
+      <b>DESISTÊNCIA</b>.
+    </p>
+    <p>4.2 Caso haja desistência pela parte da <b>SEGURADORA</b> ou <b>SEGURADO</b>, não será <b>DEVOLVIDO</b> o
+      <b>VALOR
+        PAGO</b> referente aos meses
+      <b>CONTRATADOS</b> nem será <b>COBRADO</b> nada a mais ao <b>SEGURADO</b>.
+    </p>
+    <p>E por estarem justos e contratados assinam o presente contrato em 2 (duas) vias de igual teor e forma, para os
+      mesmos
+      efeitos.</p>
+
+    <p>_________________________________________________________________________________________________________</p>
+    <p style="margin: 0"><b>SEGURADO(A)</b></p>
+
+    <p>_________________________________________________________________________________________________________</p>
+    <p style="margin: 0"><b>SEGURADORA</b></p>
+  </div>
+  <button onclick="downloadPDF()">Download</button>
+</body>
+<script>
+  function downloadPDF() {
+    var data = document.getElementById("content").innerHTML;
+    var window_p = window.open("", "", "width=800, height=600");
+
+    window_p.document.write("<html>");
+    window_p.document.write("<body>");
+    window_p.document.write(data);
+    window_p.document.write("</body></html>");
+    window_p.document.close();
+    window_p.print()
+  }
+</script>
+
+</html>

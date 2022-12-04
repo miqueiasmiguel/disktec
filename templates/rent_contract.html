@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="content">
+    <h3 style="text-align: center;">Conserto de Máquina de Lavar Roupas</h3>
+
+    <p>CNPJ: 20.348.152.000.97</p>
+    <p>(83) 98727-7649 Técnico Responsável Flávio Santos</p>
+    <p>Rua Doutor Vital Brasil, N59 – Valentina –João Pessoa</p>
+
+    <h2 style="text-align: center;">Contrato de Locação de Máquina de Lavar Roupas</h2>
+
+    <p><b>Nome:</b> {{ client.name }} </p>
+    <p><b>Profissão:</b> {{ client.profession }} </p>
+    <p><b>Endereço:</b> {{ client.address }} <b>Nº:</b> {{ client.house_number }} </p>
+    <p><b>Bairro:</b> {{ client.district }} <b>RG:</b> {{ client.rg }} <b>CPF:</b> {{ client.cpf }} </p>
+    <p><b>Instagram:</b> {{ client.instagram }} Doravante denominada <b>LOCATÓRIO</b>, ambas as partes aqui
+      representadas
+      por quem de direito, tem justo e contratado entre Si a <b>LOCAÇÃO DA MÁQUINA DE LAVAR ABAIXO DISCRIMINADOS;</b>
+      Mediante as cláusulas e condições a seguir estipuladas :</p>
+
+    <h4>1. OBJETO/VALOR</h4>
+
+    <p>Pelo presente instrumento o <b>LOCADOR</b> aluga à <b>LOCATÓRIA</b> a Máquina de Lavar Roupas abaixo
+      discriminada, e
+      se obriga locá-los nas condições estabelecidas neste contrato.</p>
+
+    <p><b>Máquina:</b> {{ client.machine }} <b>Modelo:</b> {{ client.model }} </p>
+
+    <p><b>1.1</b> A Máquina locada, será utilizada pelo próprio <b>LOCATÓRIO</b> para exercer suas funções de <b>LAVAGEM
+        E
+        USO DOMÉSTICO.</b></p>
+
+    <p><b>2. ALUGUEIS MENSAIS</b></p>
+
+    <p><b>2.1</b> O LOCATÓRIO pagará ao LOCADOR a quantia MENSAL de R${{ client.installments_value }}</p>
+
+    <p><b>3. MANUNTENÇÃO, ASSISTÊNCIA TÉCNICA / SEGURO</b></p>
+
+    <p><b>3.1</b>A Manuntenção da máquina, inclusive a troca de peças oriundas do desgaste natural de sua utilização
+      objeto
+      do presente contrato, é de total responsabilidade do <b>LOCADOR.</b></p>
+    <p><b>3.2 O LOCATÓRIO </b> deve manter a <b>MÁQUINA SEGURA</b>, pois <b>O LOCADOR </b>não terá nenhuma
+      responsabilidade
+      no que se refere a danos, roubo ou perda da <b>MÁQUINA.</b></p>
+    <p><b>3.2 O LOCATÓRIO </b> deve manter a <b>MÁQUINA </b> em perfeitas condições de uso. <b>OBS: </b>Conforme o tipo
+      de
+      MÁQUINA há possibilidade de instituir um seguro para o equipamento a ser locado.</p>
+
+    <p><b>4. PRAZO DE VIGÊNCIA DO CONTRATO</b></p>
+
+    <p><b>4.1</b> O presente contrato é estabelecido por prazo de <b>INDETERMINADO, </b>conforme parcelas sejam pagas
+      regularmente.</p>
+
+    <p><b>5. RECISÃO</b></p>
+
+    <p><b>5.1 O LOCATÓRIO </b> ou o <b>LOCADOR</b>poderão rescindir o presente contrato a qualquer época, desde que
+      comunique com antecedência de <b>30 (TRINTA) dias </b> <b style="color: red">O Locatório tem até 5 dias úteis para
+        efetua o pagamento em atraso caso haja algum imprevisto, após este prazo a máquina será recolhida.</b> E por
+      estarem
+      justos e contratados assinam o presente contrato em 2 (duas) vias de igual teor e forma, para os mesmos efeitos.
+    </p>
+
+    <p>___________________________________________________________________________________________________</p>
+    <p><b>LOCATÓRIO(A)</b></p>
+
+    <p>___________________________________________________________________________________________________</p>
+    <p><b>Flavio Santos (Técnico Responsável)</b></p>
+  </div>
+  <button onclick="downloadPDF()">Download</button>
+</body>
+<script>
+  function downloadPDF() {
+    var data = document.getElementById("content").innerHTML;
+    var window_p = window.open("", "", "width=800, height=600");
+
+    window_p.document.write("<html>");
+    window_p.document.write("<body>");
+    window_p.document.write(data);
+    window_p.document.write("</body></html>");
+    window_p.document.close();
+    window_p.print()
+  }
+</script>
+
+</html>

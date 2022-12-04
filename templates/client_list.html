@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista</title>
+</head>
+<body>
+  <div id="content">
+    {% for client in clients %}
+    {{ client.name }}
+    <br>
+    {% endfor %}
+  </div>
+  <br>
+  <button onclick="downloadPDF()">Download</button>
+</body>
+<script>
+  function downloadPDF() {
+    var data = document.getElementById("content").innerHTML;
+    var window_p = window.open("", "", "width=800, height=600");
+
+    window_p.document.write("<html>");
+    window_p.document.write("<body>");
+    window_p.document.write(data);
+    window_p.document.write("</body></html>");
+    window_p.document.close();
+    window_p.print()
+  }
+</script>
+</html>

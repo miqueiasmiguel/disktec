@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<form id="contact" method="get">
+    {% csrf_token %}
+    <div class="row-config">
+      <div class="col-lg-6 offset-lg-0">
+        <div class="section-heading">
+          <h6>Entradas</h6>
+          <!--<h2>Fill Out The Form Below To <span>Get</span> In <em>Touch</em> With Us</h2>-->
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-6">
+            <input type="date" id="start" name="search_date">
+          </div>
+          <div class="col-lg-6">
+            <select name="search_type" id="type"  class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <option value="all">Todos</option>
+              <option value="insurance_rent">Seguros e Aluguéis</option>
+              <option value="sale_service">Vendas e Serviços</option>
+              <option value="insurance">Seguros</option>
+              <option value="rent">Aluguéis</option>
+              <option value="sale">Vendas</option>
+              <option value="service">Serviços</option>
+            </select>
+          </div>
+          <button id="" type="submit" class="btn">Atualizar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <table class="table" id="table_count">
+    <thead>
+        <tr>
+          <th scope="col">Data</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Valor</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+    <tbody>
+      {% for row in query %}
+      <tr>
+        <td>{{ row.date|date:"j/n/Y" }}</td>
+        <td>{{ row.name }}</td>
+        <td>R$ {{ row.value }}</td>
+        <td>
+          {% if row.type == 'insurance' %}
+              Seguro
+            {% elif row.type == 'rent' %}
+              Aluguel
+            {% elif row.type == 'sale' %}
+              Venda
+            {% elif row.type == 'service' %}
+              Serviço
+          {% endif %}
+        </td>
+        <td></td>
+      </tr>
+      {% endfor %}
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>R$ {{ total }}</td>
+    </tr>
+    </tbody>
+  </table>
+{% endblock content %}
